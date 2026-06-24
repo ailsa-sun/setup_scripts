@@ -53,7 +53,7 @@ fi
 # ─── Step 2: Copy public key to remote machine ───
 echo "Copying public key to $USER@$IP ..."
 echo "(You may be prompted for the remote password)"
-ssh-copy-id -i "$KEY_FILE.pub" "$USER@$IP"
+cat "$KEY_FILE.pub" | ssh "$USER@$IP" "mkdir -p ~/.ssh && chmod 700 ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
 echo "Public key installed on remote machine."
 
 # ─── Step 3: Add entry to SSH config ───

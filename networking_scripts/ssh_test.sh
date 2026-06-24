@@ -6,9 +6,10 @@
 # ─────────────────────────────────────────
 
 MACHINES=(
-  "user1@192.168.1.100"
-  "user2@192.168.1.101"
-  "user3@hostname.example.com"
+  "bkinteldesktop"
+  "cmujump"
+  "cmuwin"
+  "bwrcintellaptop"
   # add more here...
 )
 
